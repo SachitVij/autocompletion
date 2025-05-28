@@ -25,6 +25,7 @@ After passing through the neural network, the model outputs a **probability dist
 | 2(predicting 'm') | 0.02   | 0.006 | 0.05 | 0.3  | 0.1 | 0.02 | 0.03 | 0.02 |
 | 3(predicting 'i') | 0.04   | 0.008 | 0.1  | 0.4  | 0.1 | 0.3  | 0.02 | 0.03 |
 | 7(predicting'.')  | 0.005  | 0.005 | 0.05 | 0.05 | 0.1 | 0.1  | 0.02 | 0.7  |</br>
+</br>
 Each row represents the **probabilities assigned to each character** when making a prediction.</br>
 prob[torch.arange(prob.shape[0]), Y] will extract/fetches the probability assigned to the correct target character, then we calculate loss and backpropagate to optimize the weights.
 
