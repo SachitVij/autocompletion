@@ -1,4 +1,4 @@
-﻿# Predicting words using MakeMore
+﻿# Predicting words using MLP
 
 
 We have a dataset of name. Here, what we do is we convert that dataset into a new datasets defined as X and Y. Lets say one of the name in the dataset is emilly
