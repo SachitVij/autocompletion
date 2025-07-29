@@ -34,9 +34,7 @@ prob[torch.arange(prob.shape[0]), Y] will extract/fetches the probability assign
 - Uses MLP (Multi-Layer Perceptron) architecture
 - Embedding layer to convert words to dense vectors
 - Context size of 2 words to predict the next word
-- Real-time loss visualization during training
 - Trained using CrossEntropyLoss and Adam optimizer
-- Interactive prediction function for testing
 
 ## Sentence Generation Model
 - Similar MLP architecture with larger embedding dimensions
