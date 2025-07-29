@@ -1,7 +1,8 @@
 ﻿# Predicting words using MLP
+This project implements neural language models for word prediction and sentence generation, inspired by Andrej Karpathy's [makemore](https://github.com/karpathy/makemore). The models are built using PyTorch and trained on US Twitter Text English datasets.
 
-
-We have a dataset of name. Here, what we do is we convert that dataset into a new datasets defined as X and Y. Lets say one of the name in the dataset is emilly
+## Working of MakeMore
+We have a dataset for training the model and what we do is we convert that dataset into a new datasets defined as X and Y. Lets say one of the name in the dataset is emilly
 So X and Y are defined as :
 X takes the present character and previous 2 character and Y represent the next character.
 
@@ -26,7 +27,22 @@ After passing through the neural network, the model outputs a **probability dist
 | 3(predicting 'i') | 0.04   | 0.008 | 0.1  | 0.4  | 0.1 | 0.3  | 0.02 | 0.03 |
 | 7(predicting'.')  | 0.005  | 0.005 | 0.05 | 0.05 | 0.1 | 0.1  | 0.02 | 0.7  |</br>
 </br>
-Each row represents the **probabilities assigned to each character** when making a prediction.</br>
+Each row represents the probabilities assigned to each character when making a prediction.</br>
 prob[torch.arange(prob.shape[0]), Y] will extract/fetches the probability assigned to the correct target character, then we calculate loss and backpropagate to optimize the weights.
 
-#### inspiration from https://github.com/karpathy/makemore 
+## Word Prediction Model
+- Uses MLP (Multi-Layer Perceptron) architecture
+- Embedding layer to convert words to dense vectors
+- Context size of 2 words to predict the next word
+- Real-time loss visualization during training
+- Trained using CrossEntropyLoss and Adam optimizer
+- Interactive prediction function for testing
+
+## Sentence Generation Model
+- Similar MLP architecture with larger embedding dimensions
+- Sentence generation capability with customizable length
+- End token detection for natural sentence termination
+- Vocabulary size of 5000 most common words
+
+Acknowledgments
+This project was inspired by Andrej Karpathy's makemore project, adapting its concepts for word-level and sentence-level prediction.
